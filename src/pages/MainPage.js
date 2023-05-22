@@ -23,8 +23,7 @@ export const MainPage = () => {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: "flex-end",
       }}
     >
       <Box
@@ -34,7 +33,7 @@ export const MainPage = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          mt: 4,
           overflowY: "scroll",
         }}
       >
@@ -45,16 +44,20 @@ export const MainPage = () => {
           <Item task={task} key={task.id} />
         ))}
       </Box>
-      {createNewTask ? (
-        <NewTaskPopup closeAdding={handleOpenAddingTask} />
-      ) : (
-        <CustomButton
-          buttonText={"Create new task"}
-          variant={"contained"}
-          action={handleOpenAddingTask}
-          color={"secondary"}
-        />
-      )}
+      <Box
+        sx={{ mt: 2, width: "100%", display: "flex", justifyContent: "center" }}
+      >
+        {createNewTask ? (
+          <NewTaskPopup closeAdding={handleOpenAddingTask} />
+        ) : (
+          <CustomButton
+            buttonText={"Create new task"}
+            variant={"contained"}
+            action={handleOpenAddingTask}
+            color={"secondary"}
+          />
+        )}
+      </Box>
     </Box>
   );
 };

@@ -40,7 +40,7 @@ export const NewTaskPopup = ({ closeAdding }) => {
         padding: 2,
         display: "flex",
         alignItems: "center",
-        boxShadow: "0 0 10px 0 #c2badb",
+        boxShadow: "0 0 10px 1px #5d32a6",
       }}
     >
       <Box>
